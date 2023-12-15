@@ -1,0 +1,196 @@
+/* Import Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(113,55,224,1) 0%, rgba(71,109,222,1) 35%, rgba(9,186,206,1) 100%);
+}
+
+
+/* Home Page Css::::::::::: */
+.homePage-container {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+
+}
+.draw-animation{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px; 
+    height: 250px;
+    margin-top: 40px;
+}
+.homePage-container h1{
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: 'Cookie', cursive;
+    font-size: 60px;
+    font-weight: 400;
+}
+.homePage-container p{
+    color: #d4d4d4;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.drawing-button button {
+    background-color: #ffffffa3;
+    width: 135px;
+    height: 46px;
+    border: none;
+    border-radius: 13px 2px 13px 0px;
+    font-weight: 700;
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.drawing-button button:hover{
+    background: linear-gradient(90deg, rgba(113,55,224,1) 0%, rgba(71,109,222,1) 35%, rgba(9,186,206,1) 100%);
+    color: #fff;
+}
+
+
+/* Index Page Css ::::::::::*/
+.container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    padding: 18px 30px;
+}
+
+.tools-board{
+    width: 210px;
+    padding: 15px 22px 0;
+}
+.tools-board .row{
+    margin-bottom: 20px;
+}
+.row .options{
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+.row .options .option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background: whitesmoke;
+    padding: 3px 12px;
+    border-radius: 6px;
+}
+.option :where(span, label){
+    color: #596162;
+    padding: 10px;
+}
+.option #fill-color{
+    height: 14px;
+    width: 14px;
+}
+.option:is(:hover, .active) img{
+    filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+.option:is(:hover, .active) :where(span, label){
+    color:#4B96F1;
+}
+#fill-color:checked ~ label{
+    color:#4B96F1;
+}
+.option #size-slider{
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+}
+.colors .options{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.colors .option{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: relative;
+}
+.colors .option:nth-child(1){
+    background-color: #fff;
+    border: 1px solid #B2B2B2;
+}
+.colors .option:nth-child(2){
+    background-color: #000;
+}
+.colors .option:nth-child(3){
+    background-color: #4B96F1;
+}
+.colors .option:nth-child(4){
+    background-color:#6e3fb0;
+}
+.colors .option:nth-child(5){
+    background-color: #0fd859;
+}
+.colors .option.selected::before{
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    top: 50%;
+    left: 50%;
+    background: inherit;
+    border-radius: inherit;
+    border: 2px solid #fff;
+    transform: translate(-50%,-50%);
+}
+.colors .option:first-child.selected::before{
+    border-color: #ccc;
+}
+.option #color-picker{
+    opacity: 0;
+    cursor: pointer;
+}
+.buttons button{
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 11px 0;
+    font-size: 15px;
+    margin-bottom: 13px;
+    background: none;
+    border-radius: px;
+    cursor: pointer;
+}
+.buttons .clear-canvas{
+    color: #7137E0;
+    border: 1px solid #6D767B;
+    transition: all 0.3s ease;
+}
+.clear-canvas:hover{
+    color: #fff;
+    background-color:#6D767B;
+}
+.buttons  .save-img{
+    background: linear-gradient(90deg, rgba(113,55,224,1) 0%, rgba(71,109,222,1) 35%, rgba(9,186,206,1) 100%);
+
+}
+section{
+    background-color: #fff;
+    border-radius: 7px;
+
+}
+.drawing-board{ 
+    flex: 1;
+}
+.drawing-board canvas{
+    width: 100%;
+    height: 100%;
+}
