@@ -8,40 +8,47 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(90deg, rgba(113,55,224,1) 0%, rgba(71,109,222,1) 35%, rgba(9,186,206,1) 100%);
-}
-
 
 /* Home Page Css::::::::::: */
-.homePage-container {
-    width: 100%;
-    height: 100vh;
-    text-align: center;
+.hero-section{
+   background-image: url("images/hero-bg.jpg");
+   background-size: cover;
+   padding-bottom: 50px;
+}
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.hero-container{
+    text-align: center;
 }
 .draw-animation{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 250px; 
-    height: 250px;
-    margin-top: 40px;
+    width: 200px; 
+    height: 200px;
 }
-.homePage-container h1{
+.hero-container h1{
     color: #fff;
     margin-bottom: 20px;
     font-family: 'Cookie', cursive;
-    font-size: 60px;
+    font-size: 100px;
     font-weight: 400;
+    text-align: center;
 }
-.homePage-container p{
+.hero-container p{
     color: #d4d4d4;
     margin-bottom: 20px;
     font-size: 18px;
+}
+.hero-container img {
+    width: 100%;
+    height: 100%;
+    border: 23px solid #ffffff3d;
+    border-radius: 20px;
+    margin-top: 52px;
 }
 .drawing-button button {
     background-color: #ffffffa3;
@@ -53,15 +60,18 @@ body{
     margin-right: 15px;
     cursor: pointer;
     font-size: 15px;
+    margin-top: 20px;
 }
 .drawing-button button:hover{
     background: linear-gradient(90deg, rgba(113,55,224,1) 0%, rgba(71,109,222,1) 35%, rgba(9,186,206,1) 100%);
     color: #fff;
 }
 
-
-/* Index Page Css ::::::::::*/
-.container{
+/* main Page Css ::::::::::*/
+.main-container{
+    background: linear-gradient(90deg, rgba(113,55,224,1) 0%, rgba(71,109,222,1) 35%, rgba(9,186,206,1) 100%);
+}
+.main-container{
     display: flex;
     width: 100%;
     height: 100%;
